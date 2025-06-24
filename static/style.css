@@ -1,0 +1,168 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap');
+
+/* Body Base */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle at top right, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  margin: 0;
+  padding: 40px 20px;
+  animation: fadeIn 2s ease-in;
+  overflow-x: hidden;
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  color: #00ffc3;
+  text-shadow: 0 0 15px #00ffc3;
+  margin-bottom: 25px;
+  animation: slideIn 1.2s ease-out;
+}
+
+/* General Containers */
+.container, .chat-container {
+  max-width: 700px;
+  margin: auto;
+  background: rgba(20, 20, 20, 0.95);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 195, 0.4);
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Forms & Inputs */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+select,
+button {
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Roboto', sans-serif;
+  outline: none;
+}
+
+select,
+button,
+input[type="submit"] {
+  background: linear-gradient(to right, #00ffc3, #00bfa6);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+select:hover,
+button:hover,
+input[type="submit"]:hover {
+  background: linear-gradient(to right, #00ffcc, #009688);
+  transform: scale(1.03);
+}
+
+/* Response Box */
+.response {
+  padding: 18px;
+  background: rgba(0, 0, 0, 0.75);
+  border-left: 5px solid #00ffc3;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  display: inline-block;
+  margin: 8px 0;
+  color: #00ffc3;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #00bfa6;
+  text-shadow: 0 0 5px #00ffc3;
+}
+
+/* Flash messages or alerts */
+.alert {
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #ff4444;
+  color: white;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* File list */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  background: #1c1c1c;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li form {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  0% { transform: translateX(-60px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+/* Make page stretch to full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure content expands to push footer down */
+.main-content {
+  flex: 1;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #00ffc3;
+  font-size: 14px;
+  border-top: 1px solid #00ffc3;
+}

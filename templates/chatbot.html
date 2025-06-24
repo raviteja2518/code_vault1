@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Vault Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="main-content">
+    <div class="container">
+      <h2>🤖 Cyber Vault Chatbot Assistant</h2>
+      <label for="faq">Select your question:</label>
+      <select id="faq">
+        <option value="">-- Choose a question --</option>
+        <option value="encryption">How is my file encrypted?</option>
+        <option value="security">Is this storage system secure?</option>
+        <option value="key">What happens if I forget the encryption key?</option>
+        <option value="login">How can I reset my password?</option>
+        <option value="upload">Can I upload any file type?</option>
+      </select>
+      <button onclick="getAnswer()">Get Answer</button>
+      <div id="response" class="response"></div>
+      
+    </div>
+  </div>
+  <footer>
+    © 2025 Cyber Vault. All rights reserved. | Designed with 🔐 and 💻 by CyberSec Team
+  </footer>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
