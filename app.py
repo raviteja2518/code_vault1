@@ -11,11 +11,8 @@ bcrypt = Bcrypt(app)
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-# MongoDB setup
-client = MongoClient("mongodb://localhost:27017/")
-db = client['cyber_vault']
-users = db['users']
-files = db['files']
+# MongoDB setu
+client = MongoClient(os.environ.get("MONGO_URI"))
 
 # Routes
 @app.route('/')
