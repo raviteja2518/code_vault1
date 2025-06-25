@@ -13,9 +13,9 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # MongoDB setu
 client = MongoClient(os.environ.get("MONGO_URI"))
-dbs = client["cybersteals"]
-users = dbs["users"]
-files = dbs["files"]
+db = client["cybervaultDB"]
+users = db["users"]
+files = db["files"]
 
 # Routes
 @app.route('/')
