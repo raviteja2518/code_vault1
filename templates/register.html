@@ -3,12 +3,16 @@
 <head>
   <title>Register - Cyber Vault</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
+
   
 </head>
 <body>
   <div class="container">
     <h2>Create Account</h2>
     <form method="POST">
+      
+
       <input type="text" name="username" placeholder="Username" required><br>
       <input type="email" name="email" placeholder="Email" required><br>
       <input type="password" name="password" placeholder="Password" required><br>
